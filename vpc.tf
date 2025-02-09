@@ -1,6 +1,6 @@
 //1. creat the vpc
 resource "aws_vpc" "custom_vpc" {
-  cidr_block           = "10.230.0.0/16"
+  cidr_block           = "10.75.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
@@ -13,7 +13,7 @@ resource "aws_vpc" "custom_vpc" {
 variable "vpc_availability_zone" {
   type        = list(string)
   description = "Availability zone"
-  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  default     = ["us-west-1a", "us-west-1b", "us-west-1c"]
 }
 
 resource "aws_subnet" "public_subnet" {
